@@ -1,0 +1,24 @@
+/* NovaDent alt sayfa yardımcı stilleri — style.css'ten sonra yüklenir, mevcut değişkenleri kullanır */
+.breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:var(--s5);font-size:13px;color:var(--muted)}
+.breadcrumb a{font-weight:600;color:var(--teal)}
+.breadcrumb a:hover{text-decoration:underline}
+.breadcrumb span[aria-hidden]{color:var(--line)}
+
+.service-meta{list-style:none;margin:var(--s3) 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.service-meta li{border:1px solid var(--line);border-radius:999px;padding:4px 10px;font-size:12px;color:var(--muted);background:var(--paper)}
+.service-card.mint .service-meta li{background:transparent}
+
+.step-index{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:10px;background:var(--mint);color:#0f766e;font-size:13px;font-weight:700}
+.section-deep .step-index{background:rgba(255,255,255,.14);color:#fff}
+
+.prose{max-width:62ch;margin-bottom:var(--s5)}
+.prose p{color:var(--muted);font-size:16px;line-height:1.7;margin:0 0 var(--s3)}
+.prose p:last-child{margin-bottom:0}
+
+.site-header nav a.active{color:var(--teal)}
+
+[data-theme="dark"] .breadcrumb a{color:#8de0c3}
+[data-theme="dark"] .step-index{background:#24463b;color:#8de0c3}
+[data-theme="dark"] .service-meta li{background:transparent;color:#b8c5c0}
+
+@media(max-width:767px){.breadcrumb{margin-bottom:var(--s4)}.prose{max-width:none}}
