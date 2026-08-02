@@ -1,24 +1,16 @@
-/* NovaDent alt sayfa yardımcı stilleri — style.css'ten sonra yüklenir, mevcut değişkenleri kullanır */
+/* NovaPrint sayfa yardımcıları */
 .breadcrumb{display:flex;align-items:center;gap:10px;margin-bottom:var(--s5);font-size:13px;color:var(--muted)}
-.breadcrumb a{font-weight:600;color:var(--teal)}
-.breadcrumb a:hover{text-decoration:underline}
+.breadcrumb a{font-weight:700;color:var(--teal)}
 .breadcrumb span[aria-hidden]{color:var(--line)}
-
 .service-meta{list-style:none;margin:var(--s3) 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
 .service-meta li{border:1px solid var(--line);border-radius:999px;padding:4px 10px;font-size:12px;color:var(--muted);background:var(--paper)}
-.service-card.mint .service-meta li{background:transparent}
-
-.step-index{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:10px;background:var(--mint);color:#0f766e;font-size:13px;font-weight:700}
-.section-deep .step-index{background:rgba(255,255,255,.14);color:#fff}
-
-.prose{max-width:62ch;margin-bottom:var(--s5)}
-.prose p{color:var(--muted);font-size:16px;line-height:1.7;margin:0 0 var(--s3)}
-.prose p:last-child{margin-bottom:0}
-
-.site-header nav a.active{color:var(--teal)}
-
-[data-theme="dark"] .breadcrumb a{color:#8de0c3}
+.step-index{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:10px;background:var(--mint);color:var(--teal);font-size:13px;font-weight:800}
+.prose{max-width:68ch;margin-bottom:var(--s5)}.prose p{color:var(--muted);line-height:1.75;margin:0 0 var(--s3)}
+.print-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s3)}
+.print-card{position:relative;min-height:340px;border-radius:var(--r-md);overflow:hidden;background:var(--mint)}
+.print-card img{position:absolute;inset:0;width:100%;height:100%}.print-card:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,33,28,.88),transparent 65%)}
+.print-card div{position:absolute;z-index:2;left:var(--s4);right:var(--s4);bottom:var(--s4);color:#fff}.print-card h3{font-size:1.45rem;margin:0 0 4px}.print-card p{margin:0;color:rgba(255,255,255,.82)}
+.upload-note{font-size:.82rem;color:var(--muted);margin-top:var(--s2)}
 [data-theme="dark"] .step-index{background:#24463b;color:#8de0c3}
-[data-theme="dark"] .service-meta li{background:transparent;color:#b8c5c0}
-
-@media(max-width:767px){.breadcrumb{margin-bottom:var(--s4)}.prose{max-width:none}}
+@media(max-width:900px){.print-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:767px){.print-grid{grid-template-columns:1fr}.print-card{min-height:300px}}
